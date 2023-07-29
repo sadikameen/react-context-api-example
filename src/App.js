@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import Header from './Components/Header';
+import Employees from './Components/Employees';
 import './App.css';
 
 function App() {
+  const datas = [
+    { id: '1', name: 'John Doe', role: 'dev' },
+    { id: '2', name: 'Philip', role: 'dev' },
+    { id: '3', name: 'Mark', role: 'manager' }
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header myTitle="My React App" />
+      <Employees datas={datas} />
     </div>
   );
 }

@@ -32,7 +32,16 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.my-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
 }
