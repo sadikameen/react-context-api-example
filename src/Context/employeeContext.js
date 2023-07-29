@@ -9,14 +9,15 @@ export const EmployeeContextProvider = ({ children }) => {
         { id: '3', name: 'Mark', role: 'manager' }
     ]
     const myTitle = "My React App Context API";
+    const count = datas.length;
     return (
-        <employeeContext.Provider value={{ myTitle, datas }}>
+        <employeeContext.Provider value={{ myTitle, datas, count }}>
             {children}
         </employeeContext.Provider>
     );
 };
 
 export const useEmployeeContext = () => {
-    const { myTitle, datas } = useContext(employeeContext);
-    return { myTitle, datas }
+    const { myTitle, datas, count } = useContext(employeeContext);
+    return { myTitle, datas, count }
 }
