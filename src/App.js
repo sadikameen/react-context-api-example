@@ -50,6 +50,7 @@ export default App;
 */
 
 //Version 1
+/*
 import Header from './Components/version1/Header';
 import Employees from './Components/version1/Employees';
 import './App.css';
@@ -71,6 +72,27 @@ function App() {
         <Employees />
       </div>
     </employeeContext.Provider>
+  );
+}
+
+export default App;
+*/
+
+//version 2
+
+import Header from './Components/version2/Header';
+import Employees from './Components/version2/Employees';
+import './App.css';
+import { EmployeeContextProvider } from './Context/employeeContext';
+
+function App() {
+  return (
+    <EmployeeContextProvider>
+      <div className="App">
+        <Header />
+        <Employees />
+      </div>
+    </EmployeeContextProvider>
   );
 }
 
